@@ -28,7 +28,7 @@ server.post("/forceUsers", (req,res,)=> {
 })
 
 server.delete("/forceusers/:id", (req, res, ) => {
-    Force.delete(req.params.id)
+    Force.remove(req.params.id)
     .then(user => {
         res.status(200).json(user)
 

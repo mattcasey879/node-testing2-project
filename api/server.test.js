@@ -40,3 +40,10 @@ describe("[POST] /forcUsers", () => {
       expect(res.body).toMatchObject({id:4, name: "Qui-gon"})
   }, 600);
 });
+
+describe("[DELETE] /forceUsers/:id", () => {{
+    test('deletes user', async () => {
+        const res = await request(server).del("/forceUsers/:id")
+        expect(res.status).toBe(200)
+    })
+}})
